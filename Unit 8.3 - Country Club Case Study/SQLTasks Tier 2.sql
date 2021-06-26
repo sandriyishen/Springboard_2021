@@ -126,6 +126,8 @@ ORDER BY sub.cost
 Export the country club data from PHPMyAdmin, and connect to a local SQLite instance from Jupyter notebook
 for the following questions.
 
+I also added PHPMyAdmin answers below. See python notebook for these answers in sqlite instead.
+
 QUESTIONS:
 /* Q10: Produce a list of facilities with a total revenue less than 1000.
 The output of facility name and total revenue, sorted by revenue. Remember
@@ -148,7 +150,7 @@ ORDER BY SUM(r.revenue)
 SELECT DISTINCT m1.surname, m1.firstname, CONCAT(m2.firstname, ' ', m2.surname) as recommended_by
 FROM Members m1 LEFT JOIN Members m2
 ON m1.recommendedby = m2.memid
-WHERE m1.surname <> "GUEST" AND m2.surname <> "GUEST"
+WHERE m1.surname <> 'GUEST' AND m2.surname <> 'GUEST'
 ORDER BY m1.surname, m1.firstname
 
 /* Q12: Find the facilities with their usage by member, but not guests */
